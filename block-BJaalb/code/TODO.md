@@ -30,9 +30,7 @@ Methods:
 - `isEmpty` Returns `true` if the stack is empty
 
 ```js
-class Stack {
-  // your code goes here
-}
+class Stack {}
 
 // Test 1
 
