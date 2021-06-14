@@ -115,7 +115,35 @@ Methods:
 
 ```js
 class Queue {
-  // your code goes here
+   constructor(capacity = Infinity) {
+    this.storage = [];
+    this.capacity = capacity;
+  }
+
+  get length() {
+    return this.storage.length;
+  }
+  add(value) {
+    if (this.storage.length < this.capacity) {
+      this.storage.unshift(value);
+      return this.storage;
+    } else {
+      alert('queue is over flowing');
+    }
+  }
+  remove() {
+    return this.storage.pop();
+  }
+  peak() {
+    return this.storage[this.storage.length - 1];
+  }
+  printAll() {
+    let rev = this.storage.reverse();
+    rev.forEach((elm, i) => console.log(elm));
+  }
+  isEmpty() {
+    return this.storage.length > 0 ? false : true;
+  }
 }
 
 // Test 1
